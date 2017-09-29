@@ -192,6 +192,7 @@ check_PROGRAMS += version_set_test
 check_PROGRAMS += write_batch_test
 check_PROGRAMS += issue178_test
 check_PROGRAMS += issue200_test
+check_PROGRAMS += my_test
 
 TESTS = $(check_PROGRAMS)
 
@@ -279,3 +280,6 @@ issue178_test_LDADD = libhyperleveldb.la -lpthread
 
 issue200_test_SOURCES = issues/issue200_test.cc $(TESTHARNESS)
 issue200_test_LDADD = libhyperleveldb.la -lpthread
+
+my_test_SOURCES = db/my_test.cc $(TESTHARNESS)
+my_test_LDADD = libhyperleveldb.la -lpthread
